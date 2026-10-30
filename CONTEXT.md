@@ -47,6 +47,8 @@ The owner approved public contact details: Viber +63 960 550 2514, email `josegi
 
 How it helps now uses one illustrated three-step flow with descriptive text integrated into its panels. The duplicate numbered cards have been removed. Keep the patient review/confirmation step and prototype notice explicit.
 
+The header stays at the top while scrolling. `navigation.js` measures its rendered height so section links and keyboard focus scroll clear of it, including when navigation wraps or text is enlarged. CSS provides fallback offsets without JavaScript. The fixed skip link remains above the header, and reduced-motion users retain immediate scrolling.
+
 Do not invent photos, event details, or captions. Review additional images for visible people, badges, slides, and screens containing material that should remain private. The hero remains usable independently of the event photographs.
 
 ## Handoff boundaries

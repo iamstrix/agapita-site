@@ -13,6 +13,7 @@
   --white: #ffffff;
   --focus: #ffeb3b;
   --visited: #330072;
+  --header-height: 9rem;
 
   --font: Frutiger, "Frutiger W01", Arial, "Helvetica Neue", Helvetica, sans-serif;
   color-scheme: light;
@@ -21,7 +22,8 @@
 .wordmark { font-family: "Rubik One", "Arial Black", Arial, sans-serif; font-weight: 400; letter-spacing: -0.01em; }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 16px; -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-height) + 16px); -webkit-text-size-adjust: 100%; }
+@media (min-width: 760px) { :root { --header-height: 5rem; } }
 body {
   margin: 0;
   background: var(--white);
@@ -62,14 +64,14 @@ button:focus-visible {
   overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0;
 }
 
-.skip { position: absolute; left: -9999px; top: 0; padding: 12px 16px; z-index: 10; }
+.skip { position: fixed; left: -9999px; top: 0; padding: 12px 16px; z-index: 20; }
 .skip:focus { left: 16px; top: 16px; }
 
 .wrap { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 16px; }
 @media (min-width: 720px) { .wrap { padding: 0 32px; } }
 
 /* Header */
-.header { background: var(--blue); }
+.header { position: sticky; top: 0; z-index: 10; background: var(--blue); box-shadow: 0 2px 8px rgba(0, 30, 60, .12); }
 .header-inner { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 32px; padding-top: 16px; padding-bottom: 16px; }
 .header-brand, .header-brand:visited { color: var(--white); text-decoration: none; font-size: 1.6rem; line-height: 1.2; padding: 0 4px; margin: 0 -4px; }
 .header-brand:hover { color: var(--white); text-decoration: none; }
