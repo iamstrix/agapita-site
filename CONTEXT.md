@@ -12,7 +12,7 @@ The following summarizes the supplied page, rather than independent verification
 
 - Agapita is intended to help stroke survivors with Broca's aphasia communicate by drawing on affordable tablets.
 - A patient reviews a suggested message before it goes to a nurse; messages may also be read aloud.
-- The page describes offline operation and keeping patient information within the hospital as design goals. Intended benefits are not measured clinical or environmental outcomes; the earlier implied privacy-law compliance claim has been removed.
+- The page describes offline operation and keeping patient information within the hospital as design goals. Intended benefits are not measured clinical outcomes; the earlier implied privacy-law compliance claim has been removed.
 - The founder's grandmother's experience after a severe stroke inspired the project. The story names the founder, Jose Gian Tubera.
 - The owner confirmed Agapita was conceived on May 11, 2026, for the SEA-CICSIC 2026 application. Our story shows May 2026, with the full date in the `<time>` element.
 - The owner confirmed the SEA-CICSIC 2026 bronze award at Xiamen University Malaysia on June 21, 2026, and Grand Winner, Collegiate Category, at the 17th Alfredo M. Yao Innovation Awards (AMY) on September 18, 2026.
@@ -49,7 +49,7 @@ The AMY photos include an October ceremony backdrop, but the owner explicitly co
 
 The owner approved public contact details: Viber +63 960 550 2514, email `josegiantubera@gmail.com`, and LinkedIn `https://www.linkedin.com/in/josegiantubera/`. Contact links are accessible cards with decorative channel icons. Desktop includes a local SVG QR code encoding the exact LinkedIn URL, with a four-module quiet zone. It uses no external QR service. The QR itself is also a clickable link. Below 760 pixels, the QR is hidden in favor of the direct Connect on LinkedIn card.
 
-How it helps uses one illustrated three-step flow with descriptive text integrated into its panels. The review panel includes static illustrative candidate messages and a confirmation visual; these are not working controls or a product screenshot. The duplicate numbered cards have been removed. Keep the patient review/confirmation step and prototype notice explicit.
+How it helps uses one illustrated three-step flow with descriptive text integrated into its panels, followed by two audience cards (patients; nurses and carers). To reduce repetition, the owner approved removing the For hospitals card (its points duplicated the hero ticks), the Environment goals in Intended impact, the duplicate language note in the message panel, and the "Illustrative choices" label (the note below the flow covers it). The contact intro is one sentence. The review panel includes static illustrative candidate messages and a confirmation visual; these are not working controls or a product screenshot. The duplicate numbered cards have been removed. Keep the patient review/confirmation step and prototype notice explicit.
 
 The header stays at the top while scrolling. Below 760 pixels, navigation is a compact, horizontally scrollable row instead of wrapping onto multiple lines. `navigation.js` measures the header's rendered height so section links and keyboard focus scroll clear of it, including when text is enlarged. CSS provides fallback offsets without JavaScript. The fixed skip link remains above the header, and reduced-motion users retain immediate scrolling.
 

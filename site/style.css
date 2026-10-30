@@ -137,7 +137,6 @@ button:focus-visible {
 .panel-review { border-left: 4px solid var(--green); }
 .panel-review > p { font-size: 1rem; }
 .message-preview { padding: 12px; border: 1px solid var(--border); border-radius: 8px; background: #f6f9fb; }
-.preview-label { margin-bottom: 8px; color: var(--text-secondary); font-size: .7rem; font-weight: 600; }
 .preview-options { list-style: none; padding: 0; font-size: .8rem; }
 .preview-options li { padding: 8px; border: 1px solid var(--border); border-radius: 4px; background: var(--white); margin-bottom: 6px; }
 .preview-options .is-selected { color: #004b24; border-color: var(--green); background: #e9f7ee; font-weight: 600; }
@@ -174,7 +173,7 @@ button:focus-visible {
 
 /* Cards */
 .cards { display: grid; gap: 16px; }
-@media (min-width: 760px) { .cards { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 760px) { .cards { grid-template-columns: repeat(2, 1fr); } }
 .card { background: var(--white); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
 @media (hover: hover) and (pointer: fine) {
   .card { transition: box-shadow .2s ease, transform .2s ease; }
@@ -184,13 +183,13 @@ button:focus-visible {
 .card-head h3 { margin: 0; }
 .card-head-blue { background: var(--blue); }
 .card-head-aqua { background: #007f75; }
-.card-head-dark { background: var(--dark-blue); }
 .card-body { padding: 20px 24px 12px; }
 
 /* Impact */
-.impact { display: grid; gap: 32px; margin-top: 8px; }
-@media (min-width: 760px) { .impact { grid-template-columns: 1fr 1fr; gap: 48px; } }
-.impact h3 { color: var(--blue); padding-bottom: 8px; border-bottom: 4px solid var(--light-blue); display: inline-block; }
+.impact { display: grid; gap: 24px; margin: 8px 0 0; padding: 0; list-style: none; }
+@media (min-width: 760px) { .impact { grid-template-columns: repeat(3, 1fr); gap: 48px; } }
+.impact li { margin: 0; padding-top: 12px; border-top: 4px solid var(--light-blue); }
+.impact strong { display: block; margin-bottom: 4px; color: var(--blue); }
 
 /* Story */
 .quote { font-size: 1.25rem; font-weight: 700; color: var(--blue); border-left: 4px solid var(--light-blue); padding-left: 16px; margin-top: 24px; }
