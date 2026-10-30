@@ -32,7 +32,7 @@ python -m http.server 8000 --directory site
 
 Then visit `http://localhost:8000`. Stop the server with Ctrl+C.
 
-The wordmark loads Rubik One from Google Fonts. Without network access, the CSS uses local fallback fonts. Everything else currently ships in `site/`; there are no application API dependencies or analytics scripts.
+The wordmark loads Rubik One from Google Fonts. Without network access, the CSS uses local fallback fonts. Everything else currently ships in `site/`; there are no application API dependencies or analytics scripts. A small vanilla JavaScript file adds event-photo carousel controls; without JavaScript, the photographs appear as a static gallery.
 
 ## Publish with GitHub Pages
 
@@ -51,8 +51,12 @@ For another static host, use `site/` as the publish directory and leave the buil
 
 - Page content and inline sketch illustration: `site/index.html`.
 - Styling, responsive layout, and sketch animation: `site/style.css`.
+- Event-photo controls and automatic rotation: `site/carousel.js`.
+- Selected, optimized event photographs: `site/assets/events/`.
 - Browser icon: `site/assets/favicon.svg`.
-- Product background, current claims, and pending photo idea: `CONTEXT.md`.
+- Product background, current claims, and photograph provenance: `CONTEXT.md`.
+
+Original photographs in the root `photos/` folder are ignored by Git. Only selected website copies in `site/assets/events/` are publishable. Keep originals local, and remove camera metadata when preparing additional website copies.
 
 Before publishing edits, preview desktop and mobile widths, check local links and assets, keyboard navigation, text contrast, and reduced-motion behavior. Preserve the prototype notices and review any changes to clinical, privacy, or recognition claims with the owner.
 

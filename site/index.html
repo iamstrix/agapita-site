@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Agapita</title>
-  <meta name="description" content="Agapita helps stroke survivors with Broca's aphasia communicate by drawing. A rough sketch becomes a clear message for their nurse.">
+  <meta name="description" content="Agapita is a research prototype designed to help stroke survivors with Broca's aphasia communicate through drawings and patient-confirmed messages.">
   <meta property="og:title" content="Agapita">
   <meta property="og:description" content="Giving a voice back to the beloved, one sketch at a time.">
   <meta name="theme-color" content="#005EB8">
@@ -14,6 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik+One&text=Agapita&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="carousel.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to main content</a>
@@ -24,7 +25,7 @@
       <nav class="header-nav" aria-label="Sections">
         <a href="#problem">The problem</a>
         <a href="#helps">How it helps</a>
-        <a href="#impact">Impact</a>
+        <a href="#impact">Our goals</a>
         <a href="#story">Our story</a>
       </nav>
     </div>
@@ -33,35 +34,53 @@
   <main id="main">
     <!-- Hero -->
     <section class="hero" id="top">
-      <div class="wrap hero-grid">
-        <div>
+      <div class="wrap hero-copy">
+        <div class="hero-text">
           <p class="hero-wordmark wordmark">Agapita</p>
           <h1>A voice for stroke survivors who cannot speak</h1>
-          <p class="lede">Agapita helps people with Broca's aphasia communicate by drawing. A rough sketch becomes a clear, complete message for their nurse.</p>
+          <p class="lede">A research prototype helping people with Broca's aphasia communicate through drawing. The patient reviews and confirms each suggested message before sending it to their nurse.</p>
           <ul class="ticks">
-            <li>Works without an internet connection</li>
-            <li>Patient information stays inside the hospital</li>
-            <li>Runs on affordable tablets</li>
+            <li>Designed to work without internet access</li>
+            <li>Built around keeping patient information on site</li>
+            <li>Being developed for affordable tablets</li>
           </ul>
           <a class="button" href="#helps">See how it helps</a>
         </div>
-
-        <div class="hero-demo" aria-label="Example: a sketch becomes a message">
-          <div class="panel">
-            <p class="panel-label">The patient draws</p>
-            <svg class="sketch" viewBox="0 0 240 200" aria-hidden="true">
-              <path class="stroke" d="M18 88 C70 80 150 74 222 86 C170 112 120 140 54 176 C78 128 104 72 124 18 C142 70 160 126 186 176 C140 150 82 118 18 88"/>
-            </svg>
-          </div>
-          <div class="arrow" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M12 4v16m0 0-6-6m6 6 6-6"/></svg>
-          </div>
-          <div class="panel panel-message">
-            <p class="panel-label">The nurse receives</p>
-            <p class="message">“I need my 4 PM medication, please.”</p>
-          </div>
-        </div>
       </div>
+        <div class="carousel" role="region" aria-roledescription="carousel" aria-label="Agapita at innovation events">
+          <div class="carousel-slides" id="event-slides">
+            <figure class="event-slide">
+              <img src="assets/events/sea-cicsic-demonstration.jpg" width="1600" height="1067" fetchpriority="high" decoding="async" alt="A presenter demonstrates Agapita on a tablet to seated attendees at SEA-CICSIC.">
+              <figcaption>
+                <span class="event-name">SEA-CICSIC 2026 · Xiamen University Malaysia</span>
+                <span>Demonstrating the drawing-based communication prototype on a tablet.</span>
+              </figcaption>
+            </figure>
+            <figure class="event-slide">
+              <img src="assets/events/amy-awards-stage.jpg" width="1440" height="810" loading="lazy" decoding="async" alt="An Agapita representative holding an award joins a group photograph on the AMY Innovation Awards stage.">
+              <figcaption>
+                <span class="event-name">Alfredo M. Yao Innovation Awards 2026</span>
+                <span>On stage at the awards ceremony during the 52nd Philippine Business Conference and Expo.</span>
+              </figcaption>
+            </figure>
+            <figure class="event-slide">
+              <img src="assets/events/amy-awards-recognition.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="Two award recipients hold their AMY Innovation Awards plaques beside the conference stage.">
+              <figcaption>
+                <span class="event-name">Alfredo M. Yao Innovation Awards 2026 · Manila Hotel</span>
+                <span>Celebrating recognition for Agapita alongside another innovation award recipient.</span>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="carousel-controls" hidden>
+            <button type="button" class="carousel-play" aria-controls="event-slides">Pause slideshow</button>
+            <div class="carousel-navigation">
+              <button type="button" class="carousel-previous" aria-label="Previous photo" aria-controls="event-slides">←</button>
+              <span class="carousel-count">1 / 3</span>
+              <button type="button" class="carousel-next" aria-label="Next photo" aria-controls="event-slides">→</button>
+            </div>
+          </div>
+          <p class="visually-hidden carousel-status" aria-live="polite" aria-atomic="true"></p>
+        </div>
     </section>
 
     <div class="wrap">
@@ -80,7 +99,7 @@
         <div>
           <p>This is called Broca's aphasia. Many people with it also have weakness on one side of the body, which makes fine movements hard.</p>
           <p>Existing communication aids ask patients to tap through grids of small icons. That is slow and frustrating for someone with shaky hands. At night, with no one in the room, a patient may have no way to ask for help at all.</p>
-          <p><strong>Agapita works the other way round: the technology adapts to the patient.</strong> A shaky circle, star or stick figure is enough.</p>
+          <p><strong>Agapita's goal is for the technology to adapt to the patient.</strong> Simple drawings, such as a circle, star or stick figure, are the starting point for a suggested message.</p>
         </div>
       </div>
     </section>
@@ -89,6 +108,32 @@
     <section class="section section-grey" id="helps">
       <div class="wrap">
         <h2>How it helps</h2>
+        <p class="section-intro">The intended experience, currently being developed and still to be evaluated with patients and care teams.</p>
+        <div class="communication-demo">
+        <div class="hero-demo" aria-label="Example: a sketch becomes a message">
+          <div class="panel">
+            <p class="panel-label">The patient draws</p>
+            <svg class="sketch" viewBox="0 0 240 200" aria-hidden="true">
+              <path class="stroke" d="M18 88 C70 80 150 74 222 86 C170 112 120 140 54 176 C78 128 104 72 124 18 C142 70 160 126 186 176 C140 150 82 118 18 88"/>
+            </svg>
+          </div>
+          <div class="arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 4v16m0 0-6-6m6 6 6-6"/></svg>
+          </div>
+          <div class="panel panel-review">
+            <p class="panel-label">The patient reviews and confirms</p>
+            <p>Agapita suggests a meaning. The patient can choose a different one before sending.</p>
+          </div>
+          <div class="arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 4v16m0 0-6-6m6 6 6-6"/></svg>
+          </div>
+          <div class="panel panel-message">
+            <p class="panel-label">The nurse receives</p>
+            <p class="message">“I need my medication, please.”</p>
+          </div>
+          <p class="demo-note">Illustrative example of the intended flow.</p>
+        </div>
+        </div>
         <ol class="steps">
           <li>
             <span class="step-n">1</span>
@@ -114,7 +159,7 @@
               <ul>
                 <li>Communicate without speaking or spelling</li>
                 <li>Nothing is sent until the patient confirms it</li>
-                <li>More independence and dignity</li>
+                <li>Designed to support independence and dignity</li>
               </ul>
             </div>
           </article>
@@ -124,7 +169,7 @@
               <ul>
                 <li>Know what is needed before reaching the room</li>
                 <li>Less time spent guessing what a patient means</li>
-                <li>Less physical and mental strain on busy shifts</li>
+                <li>Aim to ease communication demands on busy shifts</li>
               </ul>
             </div>
           </article>
@@ -133,7 +178,7 @@
             <div class="card-body">
               <ul>
                 <li>No internet connection needed</li>
-                <li>Patient data stays on site, in line with the Data Privacy Act of 2012 (RA 10173)</li>
+                <li>Designed to keep patient information within the hospital</li>
                 <li>Affordable tablets instead of costly specialist devices</li>
               </ul>
             </div>
@@ -145,22 +190,23 @@
     <!-- Impact -->
     <section class="section" id="impact">
       <div class="wrap">
-        <h2>Impact</h2>
+        <h2>Intended impact</h2>
+        <p class="section-intro">These are our design goals, not measured clinical or environmental outcomes. Patient testing has not yet taken place.</p>
         <div class="impact">
           <div>
             <h3>People</h3>
             <ul>
-              <li><strong>Restores patient agency.</strong> Stroke survivors who cannot speak can ask for what they need.</li>
-              <li><strong>Reduces burnout.</strong> Nurses spend less time working out what a patient wants.</li>
-              <li><strong>Widens access.</strong> Built to be affordable for public hospitals in the Philippines.</li>
+              <li><strong>Support patient agency.</strong> Help stroke survivors express what they need and confirm their own messages.</li>
+              <li><strong>Ease communication demands.</strong> Help nurses understand requests with less guesswork.</li>
+              <li><strong>Widen access.</strong> Aim for an affordable option for public hospitals in the Philippines.</li>
             </ul>
           </div>
           <div>
             <h3>Environment</h3>
             <ul>
-              <li><strong>Gives old devices a second life.</strong> Older tablets can become bedside boards.</li>
-              <li><strong>Low carbon.</strong> Runs locally rather than in energy-hungry data centres.</li>
-              <li><strong>Less paper waste.</strong> Replaces letter boards and flashcards thrown away between patient stays.</li>
+              <li><strong>Explore device reuse.</strong> Assess whether compatible older tablets can serve as bedside communication aids.</li>
+              <li><strong>Keep processing local.</strong> Develop offline operation without relying on cloud processing.</li>
+              <li><strong>Explore reusable aids.</strong> Offer a digital option alongside existing communication materials.</li>
             </ul>
           </div>
         </div>
@@ -181,11 +227,13 @@
           <ol class="timeline">
             <li><span class="tl-date">June 2026</span><span><strong>Bronze award</strong>, SEA-CICSIC 2026, Xiamen University Malaysia</span></li>
             <li><span class="tl-date">September 2026</span><span><strong>Collegiate Finalist</strong>, 17th Alfredo M. Yao Innovation Awards</span></li>
-            <li class="tl-next"><span class="tl-date">Next</span><span>Clinical pilot testing with hospital partners</span></li>
+            <li class="tl-next"><span class="tl-date">Next</span><span>Seek clinical partners for pilot testing</span></li>
           </ol>
         </div>
       </div>
     </section>
+
+
   </main>
 
   <footer class="footer">

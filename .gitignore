@@ -6,6 +6,10 @@ Thumbs.db
 node_modules/
 __pycache__/
 .venv/
+tmp/
+
+# Original photos stay local; publish selected, optimized copies in site/assets/events/.
+/photos/
 
 # Local configuration and private data do not belong in this public repository
 .env
