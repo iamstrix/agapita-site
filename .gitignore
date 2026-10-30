@@ -1,0 +1,20 @@
+# Local tools and machine files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+node_modules/
+__pycache__/
+.venv/
+
+# Local configuration and private data do not belong in this public repository
+.env
+.env.*
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+*.pem
+*.key
+*.pfx
+*.p12
