@@ -119,7 +119,7 @@ button:focus-visible {
 .communication-demo { margin: 32px 0; }
 @media (min-width: 760px) {
   .hero-demo { max-width: none; grid-template-columns: 1fr 32px 1fr 32px 1fr; align-items: center; gap: 16px; }
-  .hero-demo .panel { min-height: 242px; display: flex; flex-direction: column; justify-content: center; }
+  .hero-demo .panel { height: 100%; min-height: 300px; display: flex; flex-direction: column; justify-content: center; }
   .hero-demo .sketch { height: 160px; }
   .hero-demo .arrow { transform: rotate(-90deg); }
   .hero-demo .demo-note { grid-column: 1 / -1; }
@@ -139,6 +139,8 @@ button:focus-visible {
 .panel-message { background: var(--blue); border-color: var(--dark-blue); }
 .panel-message .panel-label { color: #cfe3f5; }
 .message { color: var(--white); font-size: 1.4rem; font-weight: 700; margin: 0; }
+.flow-detail { font-size: 1rem; margin: 12px 0 0; }
+.panel-message .flow-detail { color: var(--white); }
 @media (prefers-reduced-motion: reduce) {
   .sketch .stroke { animation: none; stroke-dashoffset: 0; }
   html { scroll-behavior: auto; }
@@ -155,14 +157,6 @@ button:focus-visible {
 .section-intro { max-width: 46rem; color: var(--text-secondary); margin-bottom: 28px; }
 .two-col { display: grid; gap: 16px; }
 @media (min-width: 900px) { .two-col { grid-template-columns: 1fr 1.2fr; gap: 64px; } }
-
-/* Steps */
-.steps { list-style: none; margin: 24px 0 40px; padding: 0; display: grid; gap: 16px; }
-@media (min-width: 760px) { .steps { grid-template-columns: repeat(3, 1fr); } }
-.steps li { background: var(--white); border: 1px solid var(--border); border-bottom: 4px solid var(--border); border-radius: 4px; padding: 24px; margin: 0; }
-.steps h3 { margin-bottom: 8px; }
-.steps p { margin: 0; color: var(--text-secondary); }
-.step-n { display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--blue); color: var(--white); font-weight: 700; margin-bottom: 16px; }
 
 /* Cards */
 .cards { display: grid; gap: 16px; }
@@ -187,6 +181,25 @@ button:focus-visible {
 .timeline li::before { content: ""; position: absolute; left: -12px; top: 4px; width: 20px; height: 20px; border-radius: 50%; background: var(--blue); border: 4px solid var(--grey-bg); }
 .timeline .tl-next::before { background: var(--grey-bg); border: 3px dashed var(--blue); }
 .tl-date { font-size: .9rem; font-weight: 700; color: var(--text-secondary); }
+.community-recognition { margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border); }
+.community-recognition h3 { font-size: 1.1rem; }
+.community-recognition p { font-size: 1rem; color: var(--text-secondary); }
+
+/* Contact */
+.contact { background: var(--pale-blue); }
+.contact-grid { display: grid; gap: 32px; align-items: center; }
+.contact-eyebrow { color: var(--blue); font-size: .9rem; font-weight: 700; margin-bottom: 8px; }
+.contact-links { display: grid; gap: 12px; font-style: normal; }
+.contact-links a { display: grid; gap: 2px; width: fit-content; min-height: 44px; padding: 4px 0; overflow-wrap: anywhere; }
+.contact-label { color: var(--text-secondary); font-size: .85rem; font-weight: 700; }
+.contact-links a:focus-visible .contact-label { color: var(--text); }
+.contact-qr { margin: 0; text-align: center; justify-self: start; }
+.contact-qr a { display: inline-block; padding: 12px; background: var(--white); border: 1px solid var(--border); border-radius: 6px; }
+.contact-qr img { display: block; width: 205px; height: 205px; }
+.contact-qr figcaption { margin-top: 12px; font-size: .9rem; color: var(--text-secondary); }
+@media (min-width: 760px) {
+  .contact-grid { grid-template-columns: minmax(0, 1fr) auto; gap: 64px; }
+}
 
 /* Hero photos: a static first slide is the no-JavaScript fallback. */
 .carousel { position: relative; overflow: hidden; background: #082d50; }

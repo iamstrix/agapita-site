@@ -53,6 +53,7 @@ For another static host, use `site/` as the publish directory and leave the buil
 - Styling, responsive layout, and sketch animation: `site/style.css`.
 - Event-photo controls and automatic rotation: `site/carousel.js`.
 - Selected, optimized event photographs: `site/assets/events/`.
+- LinkedIn contact QR code: `site/assets/linkedin-qr.svg` (encodes the same profile URL as the visible contact link).
 - Browser icon: `site/assets/favicon.svg`.
 - Product background, current claims, and photograph provenance: `CONTEXT.md`.
 

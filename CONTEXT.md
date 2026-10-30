@@ -14,7 +14,8 @@ The following summarizes the supplied page, rather than independent verification
 - A patient reviews a suggested message before it goes to a nurse; messages may also be read aloud.
 - The page describes offline operation and keeping patient information within the hospital as design goals. Intended benefits are not measured clinical or environmental outcomes; the earlier implied privacy-law compliance claim has been removed.
 - The founder's grandmother's experience after a severe stroke inspired the project.
-- The page lists a June 2026 bronze award at SEA-CICSIC 2026, Xiamen University Malaysia, and a September 2026 Collegiate Finalist recognition at the 17th Alfredo M. Yao Innovation Awards (AMY).
+- The owner confirmed the SEA-CICSIC 2026 bronze award at Xiamen University Malaysia on June 21, 2026, and Grand Winner, Collegiate Category, at the 17th Alfredo M. Yao Innovation Awards (AMY) on September 18, 2026.
+- Community acknowledgments are listed separately from competition awards: mayoral recognition on July 7, 2026, and recognition by the SK at the Sangguniang Panglungsod ng Angeles on July 21, 2026. The municipality for the mayoral recognition was requested but has not yet been supplied; do not invent it or a formal award title.
 - The footer credits computer science students at Angeles University Foundation, College of Computer Studies.
 - The page explicitly says the prototype is in development, is not a medical device, and has not yet been tested with patients. Seeking clinical partners for pilot testing is listed as a next step; existing hospital partnerships are not implied.
 
@@ -38,7 +39,13 @@ Originals remain local in the Git-ignored `/photos/` folder. Optimized JPEG copi
 | `amy-awards-stage.jpg` | `866339679_1099598699349656_4242730167503540279_n.jpg` | AMY awards stage photograph, with collegiate grand-winner text on screen. |
 | `amy-awards-recognition.jpg` | `847763390_29022109097401523_7710659296667913294_n.jpg` | AMY plaques and the 52nd Philippine Business Conference and Expo backdrop, dated October 2026 at Manila Hotel. |
 
-The AMY photos show an October grand-winner milestone beyond the existing September finalist entry. Owner confirmation was requested before updating that timeline claim. A public email address or contact link was also requested; do not invent contact details.
+The AMY photos include an October ceremony backdrop, but the owner explicitly confirmed September 18, 2026 as the grand-winner award date. Use that confirmed award date in the timeline; do not infer award dates from the photographs.
+
+## Contact and page structure
+
+The owner approved public contact details: Viber +63 960 550 2514, email `josegiantubera@gmail.com`, and LinkedIn `https://www.linkedin.com/in/josegiantubera/`. The Contact section links to these channels and includes a local SVG QR code encoding the exact LinkedIn URL, with a four-module quiet zone. It uses no external QR service. The QR itself is also a clickable link. Keep the visible contact links usable on mobile.
+
+How it helps now uses one illustrated three-step flow with descriptive text integrated into its panels. The duplicate numbered cards have been removed. Keep the patient review/confirmation step and prototype notice explicit.
 
 Do not invent photos, event details, or captions. Review additional images for visible people, badges, slides, and screens containing material that should remain private. The hero remains usable independently of the event photographs.
 
