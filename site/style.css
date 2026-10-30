@@ -257,7 +257,7 @@ button:focus-visible {
   .hero .carousel { position: absolute; inset: 0; }
   .carousel-slides, .event-slide { position: absolute; inset: 0; }
   .event-slide img { position: absolute; left: 32%; width: 68%; height: 100%; aspect-ratio: auto; object-fit: cover; object-position: center 38%; }
-  .event-slide:nth-child(3) img { object-position: 38% center; }
+  .event-slide-plaques img { object-position: 38% center; }
   .carousel::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, #082d50 10%, rgba(8,45,80,.98) 25%, rgba(8,45,80,.91) 43%, rgba(8,45,80,.4) 54%, rgba(8,45,80,.06) 70%), linear-gradient(0deg, rgba(4,22,40,.95), transparent 40%); }
   .event-slide figcaption { position: absolute; z-index: 1; bottom: 28px; right: max(32px, calc((100vw - 1016px) / 2)); width: 38%; max-width: 430px; min-height: 44px; padding: 12px 60px 12px 0; }
   .carousel-play { bottom: 28px; right: max(32px, calc((100vw - 1016px) / 2)); }
