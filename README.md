@@ -16,10 +16,22 @@ CONTEXT.md
 README.md
 site/
   .nojekyll
+  404.html
   index.html
+  robots.txt
   style.css
+  carousel.js
+  navigation.js
   assets/
+    apple-touch-icon.png
+    favicon-32.png
     favicon.svg
+    linkedin-qr.svg
+    social-preview.jpg
+    events/
+      amy-awards-recognition.jpg
+      amy-awards-stage.jpg
+      sea-cicsic-demonstration.jpg
 ```
 
 ## Preview locally
@@ -55,8 +67,10 @@ For another static host, use `site/` as the publish directory and leave the buil
 - Sticky-header scroll offset, adjusted to the rendered header height: `site/navigation.js`.
 - Selected, optimized event photographs: `site/assets/events/`.
 - LinkedIn contact QR code: `site/assets/linkedin-qr.svg` (encodes the same profile URL as the visible contact link).
-- Browser icon: `site/assets/favicon.svg`.
-- Social-sharing image: `site/assets/social-preview.jpg`. Open Graph and Twitter metadata in `site/index.html` use the repository's default Pages URL; update those absolute URLs when changing domains.
+- Browser icon: `site/assets/favicon.svg`, with PNG fallbacks `favicon-32.png` and `apple-touch-icon.png` (180 × 180, square corners) rendered from it. Regenerate both if the SVG changes.
+- Not-found page: `site/404.html`. GitHub Pages serves it at any missing path, so it uses inline styles and an absolute home link instead of relative assets.
+- Crawler rules: `site/robots.txt` (allows everything).
+- Social-sharing image: `site/assets/social-preview.jpg`. The canonical link, Open Graph and Twitter metadata in `site/index.html`, and the home link in `site/404.html` use the repository's default Pages URL; update those absolute URLs when changing domains.
 - Product background, current claims, and photograph provenance: `CONTEXT.md`.
 
 Original photographs in the root `photos/` folder are ignored by Git. Only selected website copies in `site/assets/events/` are publishable. Keep originals local, and remove camera metadata when preparing additional website copies.

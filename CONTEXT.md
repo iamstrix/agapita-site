@@ -13,17 +13,19 @@ The following summarizes the supplied page, rather than independent verification
 - Agapita is intended to help stroke survivors with Broca's aphasia communicate by drawing on affordable tablets.
 - A patient reviews a suggested message before it goes to a nurse; messages may also be read aloud.
 - The page describes offline operation and keeping patient information within the hospital as design goals. Intended benefits are not measured clinical or environmental outcomes; the earlier implied privacy-law compliance claim has been removed.
-- The founder's grandmother's experience after a severe stroke inspired the project.
+- The founder's grandmother's experience after a severe stroke inspired the project. The story names the founder, Jose Gian Tubera.
 - The owner confirmed the SEA-CICSIC 2026 bronze award at Xiamen University Malaysia on June 21, 2026, and Grand Winner, Collegiate Category, at the 17th Alfredo M. Yao Innovation Awards (AMY) on September 18, 2026.
-- Community acknowledgments are listed separately from competition awards: mayoral recognition on July 7, 2026, and recognition by the SK at the Sangguniang Panglungsod ng Angeles on July 21, 2026. The municipality for the mayoral recognition was requested but has not yet been supplied; do not invent it or a formal award title.
-- The owner requested removal of the creator credit from the footer. Keep the footer focused on the brand and prototype notice. The contact section still names Jose Gian Tubera. The project's current AUF affiliation is uncertain; do not imply an institutional affiliation.
-- The page explicitly says the prototype is in development, is not a medical device, and has not yet been tested with patients. Seeking clinical partners for pilot testing is listed as a next step; existing hospital partnerships are not implied.
+- Community acknowledgments are listed separately from competition awards: mayoral recognition by Angeles City on July 7, 2026, and recognition by the SK at the Sangguniang Panlungsod ng Angeles on July 21, 2026. Angeles City is confirmed by the owner-supplied photograph (City Mayor Carmelo B. Lazatin II, Angeles City Information Office watermark) and the linked Angeles City Information Office post. Do not invent a formal award title.
+- Recognition entries link to owner-supplied public sources: the SEA-CICSIC Facebook announcement, Context.ph coverage of the AMY awards (published October 28, 2026; names Jose Gian Tubera and Agapita as collegiate-category winner), and Facebook posts for the mayoral and SK recognitions. The Context.ph article mentions Angeles University Foundation; the page itself still does not state an institutional affiliation.
+- The owner requested removal of the creator credit from the footer. Keep the footer focused on the brand and prototype notice. Our story names Jose Gian Tubera as founder, and the contact section names Jose Gian Tubera as the contact. The project's current AUF affiliation is uncertain; do not imply an institutional affiliation.
+- The page explicitly says the prototype is in development, is not a medical device, and has not yet been tested with patients. Seeking clinical partners for pilot testing is listed as a next step, and the contact section invites hospitals and clinicians to help plan it; existing hospital partnerships are not implied.
+- Supported or planned languages (for example Filipino) have not been confirmed by the owner. Do not state them until supplied.
 
 Keep intended benefits distinct from validated clinical outcomes. Do not infer certification, patient trials, regulatory compliance, or hospital partnerships beyond what the owner has confirmed. The page's existing benefit and privacy claims should receive owner review as the project develops.
 
 ## Visual direction
 
-The design uses a light clinical palette: blue `#005eb8`, dark blue `#003087`, aqua accents, a green primary button, pale backgrounds, and dark body text. Rubik One is used for the header/footer wordmarks; body copy uses a native system font stack. The hero starts with a Research prototype eyebrow instead of repeating the wordmark. Its gradient preserves headline contrast while easing over the presenter. Feature cards have subtle hover elevation only for precise pointers, with motion disabled under reduced-motion preferences. Preserve readable type, generous spacing, keyboard focus, the skip link, and reduced-motion support.
+The design uses a light clinical palette: blue `#005eb8`, dark blue `#003087`, aqua accents, a green primary button, pale backgrounds, and dark body text. Rubik One is used for the header/footer wordmarks; body copy uses a native system font stack. At the owner's request, the hero has no eyebrow label; it opens directly with the headline. The prototype notice directly below the hero remains. Its gradient preserves headline contrast while easing over the presenter. Feature cards have subtle hover elevation only for precise pointers, with motion disabled under reduced-motion preferences. Preserve readable type, generous spacing, keyboard focus, the skip link, and reduced-motion support.
 
 ## Event-photo carousel
 
@@ -57,6 +59,6 @@ Do not invent photos, event details, or captions. Review additional images for v
 
 ## Handoff boundaries
 
-Only `site/index.html`, `site/style.css`, `site/.nojekyll`, and `site/assets/favicon.svg` were copied as website content. The existing Pages workflow was copied and adjusted to accept `main` as well as `master`. The README, this context file, website-specific agent instructions, and ignore rules were added for the independent repository.
+The original handoff copied only `site/index.html`, `site/style.css`, `site/.nojekyll`, and `site/assets/favicon.svg` as website content. Later additions made in this repository: `carousel.js`, `navigation.js`, the event photographs, LinkedIn QR code, social preview image, PNG icon fallbacks, `robots.txt`, and `404.html`. The existing Pages workflow was copied and adjusted to accept `main` as well as `master`. The README, this context file, website-specific agent instructions, and ignore rules were added for the independent repository.
 
 No application source, research notes, event submission documents, database files, patient information, Git history, or secrets were included. The original website files were left unchanged.
