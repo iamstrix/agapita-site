@@ -7,6 +7,7 @@ node_modules/
 __pycache__/
 .venv/
 tmp/
+/image.png
 
 # Original photos stay local; publish selected, optimized copies in site/assets/events/.
 /photos/

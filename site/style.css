@@ -75,9 +75,10 @@ button:focus-visible {
 .header-inner { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 32px; padding-top: 16px; padding-bottom: 16px; }
 .header-brand, .header-brand:visited { color: var(--white); text-decoration: none; font-size: 1.6rem; line-height: 1.2; padding: 0 4px; margin: 0 -4px; }
 .header-brand:hover { color: var(--white); text-decoration: none; }
-.header-nav { display: flex; flex-wrap: wrap; gap: 4px 24px; }
-.header-nav a, .header-nav a:visited { color: var(--white); font-size: 1rem; font-weight: 600; text-decoration: none; }
+.header-nav { display: flex; flex-wrap: wrap; gap: 4px; }
+.header-nav a, .header-nav a:visited { color: var(--white); font-size: 1rem; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 6px; }
 .header-nav a:hover { text-decoration: underline; }
+.header-nav a[aria-current] { background: var(--dark-blue); }
 .header a:focus-visible { color: var(--text); background: var(--focus); }
 @media (min-width: 760px) { .header-nav { margin-left: auto; } }
 @media (max-width: 759px) {
@@ -126,8 +127,9 @@ button:focus-visible {
 .communication-demo { margin: 32px 0; }
 @media (min-width: 760px) {
   .hero-demo { max-width: none; grid-template-columns: 1fr 32px 1fr 32px 1fr; align-items: center; gap: 16px; }
-  .hero-demo .panel { height: 100%; min-height: 300px; display: flex; flex-direction: column; justify-content: center; }
-  .hero-demo .sketch { height: 160px; }
+  .hero-demo .panel { height: 100%; min-height: 300px; display: flex; flex-direction: column; }
+  .hero-demo .sketch { height: 160px; margin: auto 0; }
+  .hero-demo .panel-message .flow-detail { margin-top: auto; padding-top: 12px; }
   .hero-demo .arrow { transform: rotate(-90deg); }
   .hero-demo .demo-note { grid-column: 1 / -1; }
 }
