@@ -4,6 +4,7 @@
 
   const slides = [...carousel.querySelectorAll('.event-slide')];
   const play = carousel.querySelector('.carousel-play');
+  const status = carousel.querySelector('.carousel-status');
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let current = 0;
   let paused = motion.matches;
@@ -12,6 +13,7 @@
   let timer;
   let finishTransition = () => {};
   let pointerPaused;
+  let touchStart;
 
   function schedule() {
     window.clearInterval(timer);
@@ -24,7 +26,7 @@
     }
   }
 
-  function show(index) {
+  function show(index, direction = 1) {
     finishTransition();
     const previous = current;
     current = (index + slides.length) % slides.length;
@@ -38,10 +40,10 @@
       leaving.classList.add('is-leaving');
       const options = { duration: 1100, easing: 'cubic-bezier(.22,.61,.36,1)', fill: 'both' };
       const outgoing = leaving.querySelector('img').animate([
-        { transform: 'translateX(0)' }, { transform: 'translateX(-100%)' }
+        { transform: 'translateX(0)' }, { transform: `translateX(${-direction * 100}%)` }
       ], options);
       const incoming = slides[current].querySelector('img').animate([
-        { transform: 'translateX(100%)' }, { transform: 'translateX(0)' }
+        { transform: `translateX(${direction * 100}%)` }, { transform: 'translateX(0)' }
       ], options);
       let finished = false;
       finishTransition = () => {
@@ -54,6 +56,13 @@
       };
       incoming.onfinish = finishTransition;
     }
+  }
+
+  function navigate(direction) {
+    paused = true;
+    show(current + direction, direction);
+    status.textContent = `Photo ${current + 1} of ${slides.length}: ${slides[current].querySelector('figcaption').textContent.trim()}`;
+    schedule();
   }
 
   carousel.classList.add('is-enhanced');
@@ -75,6 +84,29 @@
     if (paused) finishTransition();
     schedule();
   });
+  play.addEventListener('keydown', (event) => {
+    if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+    event.preventDefault();
+    navigate(event.key === 'ArrowLeft' ? -1 : 1);
+  });
+
+  // Listen only on photos; vertical page scrolling and the pause button remain native.
+  const photos = carousel.querySelector('.carousel-slides');
+  photos.addEventListener('touchstart', (event) => {
+    touchStart = event.touches.length === 1
+      ? { x: event.touches[0].clientX, y: event.touches[0].clientY } : null;
+  }, { passive: true });
+  photos.addEventListener('touchcancel', () => { touchStart = null; }, { passive: true });
+  photos.addEventListener('touchend', (event) => {
+    const start = touchStart;
+    touchStart = null;
+    if (!start || event.touches.length || event.changedTouches.length !== 1) return;
+    const dx = event.changedTouches[0].clientX - start.x;
+    const dy = event.changedTouches[0].clientY - start.y;
+    if (Math.abs(dx) < 50 || Math.abs(dx) < Math.abs(dy) * 1.5) return;
+    const direction = dx < 0 ? 1 : -1;
+    navigate(direction);
+  }, { passive: true });
 
   // Focus stops rotation until the visitor explicitly restarts it.
   carousel.addEventListener('focusin', () => { paused = true; schedule(); });

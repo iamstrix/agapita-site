@@ -16,20 +16,20 @@ The following summarizes the supplied page, rather than independent verification
 - The founder's grandmother's experience after a severe stroke inspired the project.
 - The owner confirmed the SEA-CICSIC 2026 bronze award at Xiamen University Malaysia on June 21, 2026, and Grand Winner, Collegiate Category, at the 17th Alfredo M. Yao Innovation Awards (AMY) on September 18, 2026.
 - Community acknowledgments are listed separately from competition awards: mayoral recognition on July 7, 2026, and recognition by the SK at the Sangguniang Panglungsod ng Angeles on July 21, 2026. The municipality for the mayoral recognition was requested but has not yet been supplied; do not invent it or a formal award title.
-- The footer credits Jose Gian Tubera individually. The owner confirmed the project is no longer plural and its current AUF affiliation is uncertain; do not imply an institutional affiliation in the creator credit.
+- The owner requested removal of the creator credit from the footer. Keep the footer focused on the brand and prototype notice. The contact section still names Jose Gian Tubera. The project's current AUF affiliation is uncertain; do not imply an institutional affiliation.
 - The page explicitly says the prototype is in development, is not a medical device, and has not yet been tested with patients. Seeking clinical partners for pilot testing is listed as a next step; existing hospital partnerships are not implied.
 
 Keep intended benefits distinct from validated clinical outcomes. Do not infer certification, patient trials, regulatory compliance, or hospital partnerships beyond what the owner has confirmed. The page's existing benefit and privacy claims should receive owner review as the project develops.
 
 ## Visual direction
 
-The existing design uses a light clinical palette: blue `#005eb8`, dark blue `#003087`, aqua accents, a green primary button, pale backgrounds, and dark body text. Rubik One is used for the Agapita wordmark, with system fonts for body copy. Preserve readable type, generous spacing, responsive layouts, keyboard focus indicators, the skip link, and reduced-motion support.
+The design uses a light clinical palette: blue `#005eb8`, dark blue `#003087`, aqua accents, a green primary button, pale backgrounds, and dark body text. Rubik One is used for the header/footer wordmarks; body copy uses a native system font stack. The hero starts with a Research prototype eyebrow instead of repeating the wordmark. Its gradient preserves headline contrast while easing over the presenter. Feature cards have subtle hover elevation only for precise pointers, with motion disabled under reduced-motion preferences. Preserve readable type, generous spacing, keyboard focus, the skip link, and reduced-motion support.
 
 ## Event-photo carousel
 
 The owner supplied photographs in the root `photos/` folder and approved a hero background carousel with right-to-left slides. It uses three selected photographs behind the desktop headline, with a dark blue gradient for readable text and event captions and controls at the lower right. On screens below 1000 pixels, the text appears above the photographs; images are contained without cropping out participants. The explanatory sketch sits in How it helps and forms a horizontal flow on wider screens.
 
-Rotation runs every seven seconds while the carousel is in view, with a 1.1-second right-to-left transition. At the owner's request, the navigation panel, arrows, counter, and descriptive captions have been removed. Captions contain only event names and the SEA-CICSIC location. A discreet pause/play icon remains, with a keyboard-accessible button, accessible label, and tooltip. Focus pauses rotation until explicitly restarted. Hover and a hidden browser tab temporarily suspend rotation. Reduced-motion users start with a static photo and no sliding animation. Without JavaScript, the first photo and its caption remain visible with the pause icon hidden. Hero text remains usable if photographs fail to load.
+Rotation runs every seven seconds while the carousel is in view, with a 1.1-second right-to-left transition. At the owner's request, the navigation panel, arrows, counter, and descriptive captions have been removed. Captions contain only event names and the SEA-CICSIC location. A discreet pause/play icon remains, with a keyboard-accessible button, accessible label, and tooltip. Focus pauses rotation until explicitly restarted. Single-finger horizontal swipes on photographs select next/previous and pause automatic rotation; vertical gestures remain native page scrolling. Left/right arrow keys on the pause button provide the same navigation, with manual changes announced to screen readers. Hover and a hidden browser tab temporarily suspend rotation. Reduced-motion users start with a static photo and no sliding animation. Without JavaScript, the first photo and its caption remain visible with the pause icon hidden. Hero text remains usable if photographs fail to load.
 
 Originals remain local in the Git-ignored `/photos/` folder. Optimized JPEG copies, with camera metadata removed and widths capped at 1600 pixels, live in `site/assets/events/`:
 
@@ -43,11 +43,15 @@ The AMY photos include an October ceremony backdrop, but the owner explicitly co
 
 ## Contact and page structure
 
-The owner approved public contact details: Viber +63 960 550 2514, email `josegiantubera@gmail.com`, and LinkedIn `https://www.linkedin.com/in/josegiantubera/`. The Contact section links to these channels and includes a local SVG QR code encoding the exact LinkedIn URL, with a four-module quiet zone. It uses no external QR service. The QR itself is also a clickable link. Keep the visible contact links usable on mobile.
+The owner approved public contact details: Viber +63 960 550 2514, email `josegiantubera@gmail.com`, and LinkedIn `https://www.linkedin.com/in/josegiantubera/`. Contact links are accessible cards with decorative channel icons. Desktop includes a local SVG QR code encoding the exact LinkedIn URL, with a four-module quiet zone. It uses no external QR service. The QR itself is also a clickable link. Below 760 pixels, the QR is hidden in favor of the direct Connect on LinkedIn card.
 
-How it helps now uses one illustrated three-step flow with descriptive text integrated into its panels. The duplicate numbered cards have been removed. Keep the patient review/confirmation step and prototype notice explicit.
+How it helps uses one illustrated three-step flow with descriptive text integrated into its panels. The review panel includes static illustrative candidate messages and a confirmation visual; these are not working controls or a product screenshot. The duplicate numbered cards have been removed. Keep the patient review/confirmation step and prototype notice explicit.
 
-The header stays at the top while scrolling. `navigation.js` measures its rendered height so section links and keyboard focus scroll clear of it, including when navigation wraps or text is enlarged. CSS provides fallback offsets without JavaScript. The fixed skip link remains above the header, and reduced-motion users retain immediate scrolling.
+The header stays at the top while scrolling. Below 760 pixels, navigation is a compact, horizontally scrollable row instead of wrapping onto multiple lines. `navigation.js` measures the header's rendered height so section links and keyboard focus scroll clear of it, including when text is enlarged. CSS provides fallback offsets without JavaScript. The fixed skip link remains above the header, and reduced-motion users retain immediate scrolling.
+
+## Social previews
+
+The page has a descriptive title and Open Graph/Twitter large-image metadata. `site/assets/social-preview.jpg` is a 1200 × 630 crop of the selected AMY stage photograph. Absolute share URLs use `https://iamstrix.github.io/agapita-site/`, derived from this repository's default Pages address; update them if a custom domain is configured. Live deployment could not be verified during this edit. Local asset links remain relative. Social previews require publication and may be cached by sharing platforms.
 
 Do not invent photos, event details, or captions. Review additional images for visible people, badges, slides, and screens containing material that should remain private. The hero remains usable independently of the event photographs.
 

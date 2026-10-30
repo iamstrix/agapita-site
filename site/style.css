@@ -15,7 +15,7 @@
   --visited: #330072;
   --header-height: 9rem;
 
-  --font: Frutiger, "Frutiger W01", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  --font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   color-scheme: light;
 }
 
@@ -80,16 +80,22 @@ button:focus-visible {
 .header-nav a:hover { text-decoration: underline; }
 .header a:focus-visible { color: var(--text); background: var(--focus); }
 @media (min-width: 760px) { .header-nav { margin-left: auto; } }
+@media (max-width: 759px) {
+  .header-inner { gap: 2px; padding-top: 10px; padding-bottom: 6px; }
+  .header-brand { font-size: 1.3rem; }
+  .header-nav { width: 100%; flex-wrap: nowrap; overflow-x: auto; gap: 4px; padding: 4px; margin: 0 -4px; }
+  .header-nav a { flex: 0 0 auto; display: flex; align-items: center; min-height: 40px; padding: 4px 8px; font-size: .875rem; white-space: nowrap; }
+}
 
 /* Hero */
 .hero { position: relative; isolation: isolate; background: #082d50; color: var(--white); }
 .hero-copy { position: relative; z-index: 2; padding-top: 48px; padding-bottom: 48px; pointer-events: none; }
 .hero-text { max-width: 36rem; pointer-events: auto; }
-.hero-wordmark { font-size: clamp(3rem, 6vw, 4rem); line-height: 1.1; color: var(--white); margin: 0 0 16px; }
+.hero-eyebrow { display: inline-block; border: 1px solid #8cb6d7; border-radius: 30px; padding: 6px 12px; font-size: .75rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #deefff; margin-bottom: 20px; }
 .hero .ticks { font-size: 1rem; }
 .hero .button:focus-visible { background: var(--focus); color: var(--text); }
 @media (min-width: 1000px) {
-  .hero-copy { padding-top: 64px; padding-bottom: 96px; min-height: 720px; }
+  .hero-copy { padding-top: 64px; padding-bottom: 96px; min-height: 680px; }
   .hero-text { width: 45%; max-width: 29rem; }
   .hero .lede { font-size: 1.15rem; }
 }
@@ -130,7 +136,13 @@ button:focus-visible {
 .panel-label { font-size: .9rem; font-weight: 700; color: var(--text-secondary); margin-bottom: 8px; }
 .sketch { width: 100%; height: 180px; display: block; }
 .panel-review { border-left: 4px solid var(--green); }
-.panel-review p:last-child { margin: 0; font-size: 1rem; }
+.panel-review > p { font-size: 1rem; }
+.message-preview { padding: 12px; border: 1px solid var(--border); border-radius: 8px; background: #f6f9fb; }
+.preview-label { margin-bottom: 8px; color: var(--text-secondary); font-size: .7rem; font-weight: 600; }
+.preview-options { list-style: none; padding: 0; font-size: .8rem; }
+.preview-options li { padding: 8px; border: 1px solid var(--border); border-radius: 4px; background: var(--white); margin-bottom: 6px; }
+.preview-options .is-selected { color: #004b24; border-color: var(--green); background: #e9f7ee; font-weight: 600; }
+.preview-confirm { display: block; border-radius: 4px; padding: 8px; text-align: center; background: var(--green); color: var(--white); font-size: .8rem; font-weight: 600; }
 .demo-note { font-size: .85rem; color: var(--text-secondary); margin: 4px 0 0; text-align: center; }
 .sketch .stroke {
   fill: none; stroke: var(--text); stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round;
@@ -164,6 +176,10 @@ button:focus-visible {
 .cards { display: grid; gap: 16px; }
 @media (min-width: 760px) { .cards { grid-template-columns: repeat(3, 1fr); } }
 .card { background: var(--white); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
+@media (hover: hover) and (pointer: fine) {
+  .card { transition: box-shadow .2s ease, transform .2s ease; }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,48,87,.1); }
+}
 .card-head { padding: 16px 24px; color: var(--white); }
 .card-head h3 { margin: 0; }
 .card-head-blue { background: var(--blue); }
@@ -183,6 +199,9 @@ button:focus-visible {
 .timeline li::before { content: ""; position: absolute; left: -12px; top: 4px; width: 20px; height: 20px; border-radius: 50%; background: var(--blue); border: 4px solid var(--grey-bg); }
 .timeline .tl-next::before { background: var(--grey-bg); border: 3px dashed var(--blue); }
 .tl-date { font-size: .9rem; font-weight: 700; color: var(--text-secondary); }
+.award-badge { display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border-radius: 6px; margin: 6px 0 8px; font-size: .9rem; }
+.award-bronze { color: #6d401e; background: #f5e7db; }
+.award-winner { color: var(--dark-blue); background: #dceafb; }
 .community-recognition { margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border); }
 .community-recognition h3 { font-size: 1.1rem; }
 .community-recognition p { font-size: 1rem; color: var(--text-secondary); }
@@ -192,8 +211,13 @@ button:focus-visible {
 .contact-grid { display: grid; gap: 32px; align-items: center; }
 .contact-eyebrow { color: var(--blue); font-size: .9rem; font-weight: 700; margin-bottom: 8px; }
 .contact-links { display: grid; gap: 12px; font-style: normal; }
-.contact-links a { display: grid; gap: 2px; width: fit-content; min-height: 44px; padding: 4px 0; overflow-wrap: anywhere; }
-.contact-label { color: var(--text-secondary); font-size: .85rem; font-weight: 700; }
+.contact-links a { display: flex; align-items: center; gap: 16px; width: 100%; max-width: 500px; min-height: 76px; padding: 14px 16px; border: 1px solid #c7d8e8; border-radius: 8px; background: var(--white); text-decoration: none; overflow-wrap: anywhere; transition: background .2s ease, box-shadow .2s ease; }
+.contact-links a > span { min-width: 0; }
+.contact-links a > span > span { display: block; }
+.contact-links a:hover { background: #f8fbff; box-shadow: 0 3px 12px rgba(0,48,87,.09); }
+.contact-links a:focus-visible { background: var(--focus); }
+.contact-icon { width: 24px; height: 24px; flex: 0 0 24px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.contact-label { color: var(--text-secondary); font-size: .8rem; font-weight: 600; margin-bottom: 3px; }
 .contact-links a:focus-visible .contact-label { color: var(--text); }
 .contact-qr { margin: 0; text-align: center; justify-self: start; }
 .contact-qr a { display: inline-block; padding: 12px; background: var(--white); border: 1px solid var(--border); border-radius: 6px; }
@@ -201,6 +225,14 @@ button:focus-visible {
 .contact-qr figcaption { margin-top: 12px; font-size: .9rem; color: var(--text-secondary); }
 @media (min-width: 760px) {
   .contact-grid { grid-template-columns: minmax(0, 1fr) auto; gap: 64px; }
+}
+@media (max-width: 759px) {
+  .contact-qr { display: none; }
+  .contact-links a { font-size: 1rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .card, .contact-links a { transition: none; }
+  .card:hover { transform: none; }
 }
 
 /* Hero photos: a static first slide is the no-JavaScript fallback. */
@@ -223,9 +255,9 @@ button:focus-visible {
 @media (min-width: 1000px) {
   .hero .carousel { position: absolute; inset: 0; }
   .carousel-slides, .event-slide { position: absolute; inset: 0; }
-  .event-slide img { position: absolute; left: 26%; width: 74%; height: 100%; aspect-ratio: auto; object-fit: cover; object-position: center 38%; }
+  .event-slide img { position: absolute; left: 32%; width: 68%; height: 100%; aspect-ratio: auto; object-fit: cover; object-position: center 38%; }
   .event-slide:nth-child(3) img { object-position: 38% center; }
-  .carousel::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, #082d50 10%, rgba(8,45,80,.98) 31%, rgba(8,45,80,.88) 44%, rgba(8,45,80,.16) 70%), linear-gradient(0deg, rgba(4,22,40,.95), transparent 40%); }
+  .carousel::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, #082d50 10%, rgba(8,45,80,.98) 25%, rgba(8,45,80,.91) 43%, rgba(8,45,80,.4) 54%, rgba(8,45,80,.06) 70%), linear-gradient(0deg, rgba(4,22,40,.95), transparent 40%); }
   .event-slide figcaption { position: absolute; z-index: 1; bottom: 28px; right: max(32px, calc((100vw - 1016px) / 2)); width: 38%; max-width: 430px; min-height: 44px; padding: 12px 60px 12px 0; }
   .carousel-play { bottom: 28px; right: max(32px, calc((100vw - 1016px) / 2)); }
 }

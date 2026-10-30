@@ -56,6 +56,7 @@ For another static host, use `site/` as the publish directory and leave the buil
 - Selected, optimized event photographs: `site/assets/events/`.
 - LinkedIn contact QR code: `site/assets/linkedin-qr.svg` (encodes the same profile URL as the visible contact link).
 - Browser icon: `site/assets/favicon.svg`.
+- Social-sharing image: `site/assets/social-preview.jpg`. Open Graph and Twitter metadata in `site/index.html` use the repository's default Pages URL; update those absolute URLs when changing domains.
 - Product background, current claims, and photograph provenance: `CONTEXT.md`.
 
 Original photographs in the root `photos/` folder are ignored by Git. Only selected website copies in `site/assets/events/` are publishable. Keep originals local, and remove camera metadata when preparing additional website copies.
