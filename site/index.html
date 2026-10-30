@@ -121,19 +121,26 @@
         <p class="section-intro">The intended experience, currently being developed and still to be evaluated with patients and care teams.</p>
         <div class="communication-demo">
         <div class="hero-demo" aria-label="Example: a sketch becomes a message">
-          <div class="panel">
-            <h3 class="panel-label">1. The patient draws</h3>
+          <div class="flow-step">
+            <div class="step-caption">
+              <h3>1. The patient draws</h3>
+              <p class="flow-detail">A simple sketch on a bedside tablet with large buttons.</p>
+            </div>
+            <div class="panel">
             <svg class="sketch" viewBox="0 0 240 200" aria-hidden="true">
               <path class="stroke" d="M18 88 C70 80 150 74 222 86 C170 112 120 140 54 176 C78 128 104 72 124 18 C142 70 160 126 186 176 C140 150 82 118 18 88"/>
             </svg>
-            <p class="flow-detail">A simple sketch on a bedside tablet with large buttons.</p>
+            </div>
           </div>
           <div class="arrow" aria-hidden="true">
             <svg viewBox="0 0 24 24"><path d="M12 4v16m0 0-6-6m6 6 6-6"/></svg>
           </div>
-          <div class="panel panel-review">
-            <h3 class="panel-label">2. Review and confirm</h3>
-            <p>Agapita suggests a meaning. The patient can choose a different one before sending.</p>
+          <div class="flow-step">
+            <div class="step-caption">
+              <h3>2. Review and confirm</h3>
+              <p class="flow-detail">Agapita suggests a meaning. The patient can choose a different one before sending.</p>
+            </div>
+            <div class="panel panel-review">
             <div class="message-preview" role="group" aria-label="Illustrative message choices, not an interactive demo">
               <ul class="preview-options">
                 <li class="is-selected"><span aria-hidden="true">✓</span> I need my medication.</li>
@@ -142,15 +149,20 @@
               </ul>
               <span class="preview-confirm"><span aria-hidden="true">✓</span> Confirm message</span>
             </div>
+            </div>
           </div>
           <div class="arrow" aria-hidden="true">
             <svg viewBox="0 0 24 24"><path d="M12 4v16m0 0-6-6m6 6 6-6"/></svg>
           </div>
-          <div class="panel panel-message">
-            <h3 class="panel-label">3. The nurse receives</h3>
-            <p class="message">“I need my medication, please.”</p>
-            <p class="message-alt" lang="fil">“Kailangan ko po ang gamot ko.”</p>
-            <p class="flow-detail">Sent only after confirmation. The message can also be read aloud.</p>
+          <div class="flow-step">
+            <div class="step-caption">
+              <h3>3. The nurse receives</h3>
+              <p class="flow-detail">Sent only after confirmation. The message can also be read aloud.</p>
+            </div>
+            <div class="panel panel-message">
+              <p class="message">“I need my medication, please.”</p>
+              <p class="message-alt" lang="fil">“Kailangan ko po ang gamot ko.”</p>
+            </div>
           </div>
           <p class="demo-note">Illustrative example of the intended flow.</p>
         </div>
