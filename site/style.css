@@ -152,6 +152,7 @@ button:focus-visible {
 .panel-message { background: var(--blue); border-color: var(--dark-blue); }
 .panel-message .panel-label { color: #cfe3f5; }
 .message { color: var(--white); font-size: 1.4rem; font-weight: 700; margin: 0; }
+.message-alt { color: #e6f1fb; font-size: 1.1rem; font-weight: 600; margin: 8px 0 0; }
 .flow-detail { font-size: 1rem; margin: 12px 0 0; }
 .panel-message .flow-detail { color: var(--white); }
 @media (prefers-reduced-motion: reduce) {
