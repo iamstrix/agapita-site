@@ -16,7 +16,7 @@ The following summarizes the supplied page, rather than independent verification
 - The founder's grandmother's experience after a severe stroke inspired the project.
 - The owner confirmed the SEA-CICSIC 2026 bronze award at Xiamen University Malaysia on June 21, 2026, and Grand Winner, Collegiate Category, at the 17th Alfredo M. Yao Innovation Awards (AMY) on September 18, 2026.
 - Community acknowledgments are listed separately from competition awards: mayoral recognition on July 7, 2026, and recognition by the SK at the Sangguniang Panglungsod ng Angeles on July 21, 2026. The municipality for the mayoral recognition was requested but has not yet been supplied; do not invent it or a formal award title.
-- The footer credits computer science students at Angeles University Foundation, College of Computer Studies.
+- The footer credits Jose Gian Tubera individually. The owner confirmed the project is no longer plural and its current AUF affiliation is uncertain; do not imply an institutional affiliation in the creator credit.
 - The page explicitly says the prototype is in development, is not a medical device, and has not yet been tested with patients. Seeking clinical partners for pilot testing is listed as a next step; existing hospital partnerships are not implied.
 
 Keep intended benefits distinct from validated clinical outcomes. Do not infer certification, patient trials, regulatory compliance, or hospital partnerships beyond what the owner has confirmed. The page's existing benefit and privacy claims should receive owner review as the project develops.
