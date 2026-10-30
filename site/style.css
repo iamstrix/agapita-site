@@ -195,29 +195,28 @@ button:focus-visible {
 .event-slide:not(:first-child) { display: none; }
 .carousel.is-enhanced .event-slide { display: block; }
 .event-slide img { display: block; width: 100%; aspect-ratio: 3 / 2; height: auto; object-fit: contain; background: #082d50; }
-.event-slide figcaption { display: grid; align-content: start; gap: 6px; padding: 20px 24px; min-height: 128px; font-size: .95rem; }
-.event-name { font-weight: 700; }
+.event-slide figcaption { padding: 20px 80px 20px 24px; min-height: 80px; font-size: .85rem; }
+.event-name { font-weight: 400; }
 .event-slide.is-leaving { position: absolute; inset: 0; pointer-events: none; }
 .event-slide.is-leaving figcaption { visibility: hidden; }
-.carousel-controls { position: relative; z-index: 3; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 0 24px 24px; }
-.carousel-controls button { min-width: 44px; min-height: 44px; padding: 8px 14px; border: 1px solid #a8c6e3; border-radius: 4px; color: var(--white); background: #082d50; font: inherit; font-size: .95rem; font-weight: 600; cursor: pointer; }
-.carousel-controls button:hover { background: #154875; }
-.carousel-controls button:focus-visible { background: var(--focus); color: var(--text); }
-.carousel-navigation { display: flex; align-items: center; gap: 16px; }
-.carousel-count { font-size: 1rem; font-variant-numeric: tabular-nums; }
+.carousel-play { position: absolute; z-index: 3; bottom: 18px; right: 24px; display: grid; place-items: center; width: 44px; height: 44px; padding: 12px; border: 0; border-radius: 50%; color: var(--white); background: rgba(8,45,80,.6); cursor: pointer; }
+.carousel-play:hover { background: #154875; }
+.carousel-play:focus-visible { background: var(--focus); color: var(--text); }
+.carousel-play svg { width: 20px; height: 20px; }
+.carousel-play .icon-play, .carousel-play[data-paused="true"] .icon-pause { display: none; }
+.carousel-play[data-paused="true"] .icon-play { display: block; }
 @media (min-width: 1000px) {
   .hero .carousel { position: absolute; inset: 0; }
   .carousel-slides, .event-slide { position: absolute; inset: 0; }
   .event-slide img { position: absolute; left: 26%; width: 74%; height: 100%; aspect-ratio: auto; object-fit: cover; object-position: center 38%; }
   .event-slide:nth-child(3) img { object-position: 38% center; }
   .carousel::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, #082d50 10%, rgba(8,45,80,.98) 31%, rgba(8,45,80,.88) 44%, rgba(8,45,80,.16) 70%), linear-gradient(0deg, rgba(4,22,40,.95), transparent 40%); }
-  .event-slide figcaption { position: absolute; z-index: 1; bottom: 90px; right: max(32px, calc((100vw - 1016px) / 2)); width: 38%; max-width: 430px; min-height: 100px; padding: 16px 0; }
-  .carousel-controls { position: absolute; bottom: 28px; right: max(32px, calc((100vw - 1016px) / 2)); width: 38%; max-width: 430px; padding: 0; }
+  .event-slide figcaption { position: absolute; z-index: 1; bottom: 28px; right: max(32px, calc((100vw - 1016px) / 2)); width: 38%; max-width: 430px; min-height: 44px; padding: 12px 60px 12px 0; }
+  .carousel-play { bottom: 28px; right: max(32px, calc((100vw - 1016px) / 2)); }
 }
 @media (max-width: 479px) {
-  .event-slide figcaption { padding: 16px; min-height: 164px; }
-  .carousel-controls { padding: 0 16px 24px; gap: 12px 8px; }
-  .carousel-navigation { gap: 10px; }
+  .event-slide figcaption { padding: 20px 76px 20px 16px; }
+  .carousel-play { right: 16px; }
 }
 
 /* Footer */

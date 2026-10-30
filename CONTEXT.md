@@ -4,7 +4,7 @@
 
 This is Agapita's public-facing information website, separated from the private application repository for intellectual property privacy. Work here should concern the website and public assets only. It does not need to connect to the Agapita application or expose its implementation.
 
-The current page explains the communication problem, a three-step sketch-to-message flow, intended benefits for patients and care teams, the founder's story, and recognition. The hero contains an inline animated sketch, an explicit patient review and confirmation step, and an illustrative nurse message. A small vanilla JavaScript carousel presents selected event photographs below the story and recognition. There is no asset bundler or package manager setup.
+The current page explains the communication problem, a three-step sketch-to-message flow, intended benefits for patients and care teams, the founder's story, and recognition. The hero uses selected event photographs as a sliding background. The inline sketch, explicit patient review and confirmation step, and illustrative nurse message sit in How it helps. The carousel uses a small vanilla JavaScript file. There is no asset bundler or package manager setup.
 
 ## Existing public narrative
 
@@ -26,9 +26,9 @@ The existing design uses a light clinical palette: blue `#005eb8`, dark blue `#0
 
 ## Event-photo carousel
 
-The owner supplied photographs in the root `photos/` folder and requested a carousel with event captions. The implemented carousel sits below Our story and Recognition, preserving the explanatory sketch in the hero. It uses three selected photographs with captions separate from the images so text does not obscure people or awards. Images are contained within a consistent frame without cropping out participants on mobile.
+The owner supplied photographs in the root `photos/` folder and approved a hero background carousel with right-to-left slides. It uses three selected photographs behind the desktop headline, with a dark blue gradient for readable text and event captions and controls at the lower right. On screens below 1000 pixels, the text appears above the photographs; images are contained without cropping out participants. The explanatory sketch sits in How it helps and forms a horizontal flow on wider screens.
 
-Rotation runs every seven seconds while the carousel is in view. Previous/next and play/pause buttons support keyboard interaction; focus and manual navigation stop rotation until explicitly restarted. Hover and a hidden browser tab temporarily suspend rotation. Reduced-motion users start with automatic playback off and no fade animation. Without JavaScript, all three captioned figures remain visible as a static gallery.
+Rotation runs every seven seconds while the carousel is in view, with a 1.1-second right-to-left transition. At the owner's request, the navigation panel, arrows, counter, and descriptive captions have been removed. Captions contain only event names and the SEA-CICSIC location. A discreet pause/play icon remains, with a keyboard-accessible button, accessible label, and tooltip. Focus pauses rotation until explicitly restarted. Hover and a hidden browser tab temporarily suspend rotation. Reduced-motion users start with a static photo and no sliding animation. Without JavaScript, the first photo and its caption remain visible with the pause icon hidden. Hero text remains usable if photographs fail to load.
 
 Originals remain local in the Git-ignored `/photos/` folder. Optimized JPEG copies, with camera metadata removed and widths capped at 1600 pixels, live in `site/assets/events/`:
 
