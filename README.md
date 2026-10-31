@@ -44,7 +44,7 @@ python -m http.server 8000 --directory site
 
 Then visit `http://localhost:8000`. Stop the server with Ctrl+C.
 
-The wordmark loads Rubik One from Google Fonts. Without network access, the CSS uses local fallback fonts. Everything else currently ships in `site/`; there are no application API dependencies or analytics scripts. A small vanilla JavaScript file adds sliding hero photographs and carousel controls; without JavaScript, the first photograph and its caption remain visible. On mobile, hero text sits above the photographs. Reduced-motion users start with a static photograph.
+The wordmark loads Rubik One from Google Fonts. Without network access, the CSS uses local fallback fonts. Everything else currently ships in `site/`; there are no application API dependencies or analytics scripts. A small vanilla JavaScript file adds rotating hero photographs (crossfade) and carousel controls; without JavaScript, the first photograph and its caption remain visible. On mobile, hero text sits above the photographs. Reduced-motion users start with a static photograph.
 
 ## Publish with GitHub Pages
 

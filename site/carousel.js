@@ -6,6 +6,7 @@
   const play = carousel.querySelector('.carousel-play');
   const status = carousel.querySelector('.carousel-status');
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const wide = window.matchMedia('(min-width: 1000px)');
   let current = 0;
   let paused = motion.matches;
   let hovered = false;
@@ -38,23 +39,24 @@
       const leaving = slides[previous];
       leaving.hidden = false;
       leaving.classList.add('is-leaving');
-      const options = { duration: 1100, easing: 'cubic-bezier(.22,.61,.36,1)', fill: 'both' };
-      const outgoing = leaving.querySelector('img').animate([
-        { transform: 'translateX(0)' }, { transform: `translateX(${-direction * 100}%)` }
-      ], options);
-      const incoming = slides[current].querySelector('img').animate([
-        { transform: `translateX(${direction * 100}%)` }, { transform: 'translateX(0)' }
-      ], options);
+      // The outgoing photo fades out above the new one, so it is never removed while still visible.
+      // On the wide layout the new photo also drifts in from the travel direction; its left edge is
+      // feathered and its right edge is off-screen, so the drift never exposes a hard edge.
+      const options = { duration: 1100, easing: 'cubic-bezier(.45,0,.25,1)', fill: 'both' };
+      const outgoing = leaving.querySelector('img').animate([{ opacity: 1 }, { opacity: 0 }], options);
+      const incoming = wide.matches ? slides[current].querySelector('img').animate([
+        { transform: `translateX(${direction * 4}%)` }, { transform: 'translateX(0)' }
+      ], options) : null;
       let finished = false;
       finishTransition = () => {
         if (finished) return;
         finished = true;
         outgoing.cancel();
-        incoming.cancel();
+        incoming?.cancel();
         leaving.hidden = true;
         leaving.classList.remove('is-leaving');
       };
-      incoming.onfinish = finishTransition;
+      outgoing.onfinish = finishTransition;
     }
   }
 

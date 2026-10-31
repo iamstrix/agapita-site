@@ -90,7 +90,7 @@ button:focus-visible {
 
 /* Hero */
 .hero { position: relative; isolation: isolate; background: #082d50; color: var(--white); }
-.hero-copy { position: relative; z-index: 2; padding-top: 48px; padding-bottom: 48px; pointer-events: none; }
+.hero-copy { position: relative; z-index: 4; padding-top: 48px; padding-bottom: 48px; pointer-events: none; }
 .hero-text { max-width: 36rem; pointer-events: auto; }
 .hero .ticks { font-size: 1rem; }
 .hero .button:focus-visible { background: var(--focus); color: var(--text); }
@@ -252,7 +252,7 @@ button:focus-visible {
 .event-slide img { display: block; width: 100%; aspect-ratio: 3 / 2; height: auto; object-fit: contain; background: #082d50; }
 .event-slide figcaption { padding: 20px 80px 20px 24px; min-height: 80px; font-size: .85rem; }
 .event-name { font-weight: 400; }
-.event-slide.is-leaving { position: absolute; inset: 0; pointer-events: none; }
+.event-slide.is-leaving { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
 .event-slide.is-leaving figcaption { visibility: hidden; }
 .carousel-play { position: absolute; z-index: 3; bottom: 18px; right: 24px; display: grid; place-items: center; width: 44px; height: 44px; padding: 12px; border: 0; border-radius: 50%; color: var(--white); background: rgba(8,45,80,.6); cursor: pointer; }
 .carousel-play:hover { background: #154875; }
@@ -264,9 +264,11 @@ button:focus-visible {
   .hero .carousel { position: absolute; inset: 0; }
   .carousel-slides, .event-slide { position: absolute; inset: 0; }
   .event-slide img { position: absolute; left: 32%; width: 68%; height: 100%; aspect-ratio: auto; object-fit: cover; object-position: center 38%; }
+  /* Feather the left edge into the gradient so it never shows as a hard line while photos change. */
+  .event-slide img { -webkit-mask-image: linear-gradient(90deg, transparent, #000 18%); mask-image: linear-gradient(90deg, transparent, #000 18%); }
   .event-slide-plaques img { object-position: 38% center; }
-  .carousel::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, #082d50 10%, rgba(8,45,80,.98) 25%, rgba(8,45,80,.91) 43%, rgba(8,45,80,.4) 54%, rgba(8,45,80,.06) 70%), linear-gradient(0deg, rgba(4,22,40,.95), transparent 40%); }
-  .event-slide figcaption { position: absolute; z-index: 1; bottom: 28px; right: max(32px, calc((100vw - 1016px) / 2)); width: 38%; max-width: 430px; min-height: 44px; padding: 12px 60px 12px 0; }
+  .carousel::after { content: ""; position: absolute; z-index: 2; inset: 0; pointer-events: none; background: linear-gradient(90deg, #082d50 10%, rgba(8,45,80,.98) 25%, rgba(8,45,80,.91) 43%, rgba(8,45,80,.4) 54%, rgba(8,45,80,.06) 70%), linear-gradient(0deg, rgba(4,22,40,.95), transparent 40%); }
+  .event-slide figcaption { position: absolute; z-index: 3; bottom: 28px; right: max(32px, calc((100vw - 1016px) / 2)); width: 38%; max-width: 430px; min-height: 44px; padding: 12px 60px 12px 0; }
   .carousel-play { bottom: 28px; right: max(32px, calc((100vw - 1016px) / 2)); }
 }
 @media (max-width: 479px) {
