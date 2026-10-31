@@ -25,9 +25,7 @@
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik+One&text=Agapita&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/fonts/rubik-one-agapita.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
   <script src="carousel.js" defer></script>
   <script src="navigation.js" defer></script>
@@ -218,7 +216,7 @@
         <div>
           <h2 class="h2-sm">Recognition</h2>
           <ol class="timeline">
-            <li><time class="tl-date" datetime="2026-06-21">June 21, 2026</time><span><strong class="award-badge award-bronze"><span aria-hidden="true">✦</span> Bronze award</strong><br>SEA-CICSIC 2026, Xiamen University Malaysia<br><a class="tl-source" href="https://www.facebook.com/ccsdragons/posts/pfbid0Pv87STEeNGyTgvTKrPQnf9edVNFpvnEP8j9SLjPHQQy8xbLPoaAoQ9BxcWRFBU17l">Facebook announcement</a></span></li>
+            <li><time class="tl-date" datetime="2026-06-21">June 21, 2026</time><span><strong class="award-badge award-bronze"><span aria-hidden="true">✦</span> Bronze award</strong><br>SEA-CICSIC 2026, Xiamen University Malaysia<br><a class="tl-source" href="https://events.xmu.edu.my/seacicsic26/result.html">Official results</a></span></li>
             <li><time class="tl-date" datetime="2026-09-18">September 18, 2026</time><span><strong class="award-badge award-winner"><span aria-hidden="true">✦</span> Grand Winner, Collegiate Category</strong><br>17th Alfredo M. Yao Innovation Awards<br><a class="tl-source" href="https://context.ph/2026/10/28/pcci-honors-two-filipino-innovations-at-2026-alfredo-m-yao-innovation-awards/">Coverage on Context.ph</a></span></li>
             <li class="tl-next"><span class="tl-date">Next</span><span>Seek clinical partners for pilot testing</span></li>
           </ol>
@@ -238,6 +236,15 @@
           <p class="contact-eyebrow">Research enquiries &amp; collaboration</p>
           <h2 id="contact-title">Let's talk about Agapita</h2>
           <p class="section-intro">Hospitals, clinicians and researchers interested in pilot testing or a demonstration: get in touch with Jose Gian Tubera.</p>
+          <h3 class="pilot-title">What a pilot involves</h3>
+          <dl class="pilot-facts">
+            <dt>Equipment</dt>
+            <dd>A bedside tablet and a local computer, connected through a separate router supplied with the system.</dd>
+            <dt>Patient data</dt>
+            <dd>Messages stay on that equipment. The prototype does not use the hospital network or the internet.</dd>
+            <dt>Planning</dt>
+            <dd>Scope and length are planned with each hospital, including ethics approval.</dd>
+          </dl>
           <address class="contact-links">
             <a href="mailto:josegiantubera@gmail.com">
               <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg>

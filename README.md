@@ -44,7 +44,7 @@ python -m http.server 8000 --directory site
 
 Then visit `http://localhost:8000`. Stop the server with Ctrl+C.
 
-The wordmark loads Rubik One from Google Fonts. Without network access, the CSS uses local fallback fonts. Everything else currently ships in `site/`; there are no application API dependencies or analytics scripts. A small vanilla JavaScript file adds rotating hero photographs (crossfade) and carousel controls; without JavaScript, the first photograph and its caption remain visible. On mobile, hero text sits above the photographs. Reduced-motion users start with a static photograph.
+The wordmark uses Rubik One, self-hosted in `site/assets/fonts/` as a subset containing only the letters of "Agapita" (SIL Open Font License; keep `OFL.txt` beside it). If the wordmark text changes, download a new subset that covers the new letters. Everything ships in `site/`; the page makes no third-party requests and has no application API dependencies or analytics scripts. A small vanilla JavaScript file adds rotating hero photographs (crossfade) and carousel controls; without JavaScript, the first photograph and its caption remain visible. On mobile, hero text sits above the photographs. Reduced-motion users start with a static photograph.
 
 ## Publish with GitHub Pages
 

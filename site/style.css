@@ -19,6 +19,8 @@
   color-scheme: light;
 }
 
+/* Rubik One (SIL OFL 1.1, see assets/fonts/OFL.txt), subset to the letters of "Agapita". */
+@font-face { font-family: "Rubik One"; font-style: normal; font-weight: 400; font-display: swap; src: url("assets/fonts/rubik-one-agapita.woff2") format("woff2"); unicode-range: U+41, U+61, U+67, U+69, U+70, U+74; }
 .wordmark { font-family: "Rubik One", "Arial Black", Arial, sans-serif; font-weight: 400; letter-spacing: -0.01em; }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -218,6 +220,11 @@ button:focus-visible {
 .contact { background: var(--pale-blue); }
 .contact-grid { display: grid; gap: 32px; align-items: center; }
 .contact-eyebrow { color: var(--blue); font-size: .9rem; font-weight: 700; margin-bottom: 8px; }
+.pilot-title { font-size: 1.1rem; margin-bottom: 8px; }
+.pilot-facts { display: grid; gap: 4px 20px; max-width: 500px; margin: 0 0 28px; font-size: 1rem; }
+.pilot-facts dt { font-weight: 700; }
+.pilot-facts dd { margin: 0 0 8px; color: var(--text-secondary); }
+@media (min-width: 480px) { .pilot-facts { grid-template-columns: auto 1fr; } .pilot-facts dd { margin: 0 0 4px; } }
 .contact-links { display: grid; gap: 12px; font-style: normal; }
 .contact-links a { display: flex; align-items: center; gap: 16px; width: 100%; max-width: 500px; min-height: 76px; padding: 14px 16px; border: 1px solid #c7d8e8; border-radius: 8px; background: var(--white); text-decoration: none; overflow-wrap: anywhere; transition: background .2s ease, box-shadow .2s ease; }
 .contact-links a > span { min-width: 0; }
