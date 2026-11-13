@@ -67,7 +67,7 @@ For another static host, use `site/` as the publish directory and leave the buil
 - Sticky-header scroll offset and current-section link highlight: `site/navigation.js`.
 - Selected, optimized event photographs: `site/assets/events/`.
 - LinkedIn contact QR code: `site/assets/linkedin-qr.svg` (encodes the same profile URL as the visible contact link).
-- Browser icon: `site/assets/favicon.svg`, with PNG fallbacks `favicon-32.png` and `apple-touch-icon.png` (180 × 180, square corners) rendered from it. Regenerate both if the SVG changes.
+- Browser icon: `site/assets/favicon.svg`, the owner's selected concept 35 drawing-A symbol in blue on white, without the wordmark. It is a self-contained vector; PNG fallbacks `favicon-32.png` (32 × 32) and `apple-touch-icon.png` (180 × 180, square corners) are rendered from it. Regenerate both if the SVG changes, and update the matching icon-link version in `site/index.html` to refresh browser caches.
 - Not-found page: `site/404.html`. GitHub Pages serves it at any missing path, so it uses inline styles and an absolute home link instead of relative assets.
 - Crawler rules: `site/robots.txt` (allows everything).
 - Social-sharing image: `site/assets/social-preview.jpg`. The canonical link, Open Graph and Twitter metadata in `site/index.html`, and the home link in `site/404.html` use the repository's default Pages URL; update those absolute URLs when changing domains.
